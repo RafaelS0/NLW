@@ -22,14 +22,13 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-
 - JavaScript
 - Git e Github
 
 
 ## 💻 Projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+Aplicativo simples em JavaScript para criar e gerenciar metas no terminal utilizando o pacote inquirer.
 
 
 

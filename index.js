@@ -15,6 +15,7 @@ const listarMetas = async ( ) =>{
    metas.forEach((m) => {
     m.checked = false
    })
+ 
 
   result.forEach((resposta) => {
    const meta = metas.find((m) => {
