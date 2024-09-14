@@ -1,5 +1,6 @@
 const { select, input , checkbox} = require('@inquirer/prompts')
 
+let mensagem = "Bem vindo ao App"
 let metas = []
 
 const listarMetas = async ( ) =>{
@@ -23,14 +24,14 @@ const listarMetas = async ( ) =>{
    })
    meta.checked = true
   }) 
-   console.log("Meta(s) concluída(s)!")   
+   mensagem = "Meta(s) concluída(s)!"
 }
 
 const cadastrarMeta = async () => {
    const meta = await input({ message: "Digite a meta:"})
 
    if(meta.length == 0){
-   console.log("A meta não pode ser vazia.")
+   mensagem = "A meta não pode ser vazia."
    return 
    }
 
@@ -38,6 +39,7 @@ const cadastrarMeta = async () => {
     value: meta, 
     checked: false
   })
+  mensagem = "Meta cadastrada com sucesso"
 }
 
 const metasRealizadas = async () => {
@@ -45,7 +47,7 @@ const metasRealizadas = async () => {
     return meta.checked
     })
     if(realizadas.length == 0 ){
-        console.log("Não existe metas realizadas!")
+        mensagem = "Não existe metas realizadas!"
         return
     }
     await select({
@@ -60,7 +62,7 @@ const metasAbertas = async () => {
  })
  
  if(abertas.length == 0 ){
-    console.log("Não existem metas abertas! ")
+    mensagem = "Não existem metas abertas!"
     return 
  }
   await select({
@@ -86,14 +88,24 @@ const deletarMetas  = async () => {
      })
     })
 
-    console.log("Deletado com sucesso!")
+    mensagem = "Deletado com sucesso!"
+}
 
+const mostrarMensagem = () => {
+    console.clear()
+
+    if(mensagem != ""){
+        console.log(mensagem)
+        console.log("")
+        mensagem = ""
+    }
 }
 
 
 const start = async () => {
     while(true){  
-        
+        mostrarMensagem()
+
        const opcao = await select({
         message: "<MENU>",
         choices: [{
