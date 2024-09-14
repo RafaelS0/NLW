@@ -1,0 +1,18 @@
+[
+  {
+    "value": "teste",
+    "checked": true
+  },
+  {
+    "value": "Andar 20 minutos todos dias",
+    "checked": false
+  },
+  {
+    "value": "Meditar 5 minutos",
+    "checked": false
+  },
+  {
+    "value": "Ler quinze minutos",
+    "checked": false
+  }
+]

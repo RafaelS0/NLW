@@ -1,1 +1,0 @@
-- Aplicativo de criar e gerenciar metas
